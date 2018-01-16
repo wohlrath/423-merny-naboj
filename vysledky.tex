@@ -1,1 +1,41 @@
 \section*{Výsledky měření}
+Měřili jsme závislost $U(I_m)$ pro čtyři různé $r$, viz tabulka \ref{t:vysledky}.
+Závislost jsme fitovali afinní funkcí (k \eqref{e:zavislost} jsme přidali $+b$) v proměnné $I_m^2$. Určili jsme pro každý průměr velikost měrného náboje (systematická chyba je \SI{1}{\percent}, viz \emph{Teoretický úvod}, statistická chyba je chyba fitu)
+\begin{align*}
+        (e/m_e)_{d=\SI{40}{\mm}} &= \chyba{1.59}{0.03}{0.02} \qquad &, b &= \SI{21}{\volt}\\
+        (e/m_e)_{d=\SI{60}{\mm}} &= \chyba{1.61}{0.04}{0.02} \qquad &, b &= \SI{51}{\volt}\\
+        (e/m_e)_{d=\SI{80}{\mm}} &= \chyba{1.66}{0.03}{0.02} \qquad &, b &= \SI{51}{\volt}\\
+        (e/m_e)_{d=\SI{100}{\mm}} &= \chyba{1.70}{0.02}{0.02} \qquad &, b &= \SI{46}{\volt}\\
+\end{align*}
+Zprůměrováním hodnot dostáváme $(\num[separate-uncertainty=true]{1.64(7)})\cdot\SI{e11}{\coulomb\per\kg}$. Chybu jsme určili součtem přes čtverec statistické chyby dané rozptylem hodnot a průměrné chyby každé z nich.
+
+
+Chybu měřeného proudu $I_m$ odhadujeme vzhledem ke specifikům přístroje na \SI{0.03}{\ampere}. Chybu měřeného napětí odhadujeme vzhledem ke kolísání hodnot na displeji na \SI{0.5}{\volt}.
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc|cc|cc|cc}
+\multicolumn{2}{c|}{$d=\SI{40}{\mm}$} & \multicolumn{2}{c|}{$d=\SI{60}{\mm}$} &\multicolumn{2}{c|}{$d=\SI{80}{\mm}$} & \multicolumn{2}{c}{$d=\SI{100}{\mm}$} \\
+$U$ (\si{\volt}) & $I_m$ (\si{\ampere}) & $U$ (\si{\volt}) & $I_m$ (\si{\ampere}) & $U$ (\si{\volt}) & $I_m$ (\si{\ampere}) & $U$ (\si{\volt}) & $I_m$ (\si{\ampere}) \\ \hline 
+174,4 & 3,10 & 183,0 & 1,90 & 184,7 & 1,41 & 170,8 & 1,09 \\ 
+190,4 & 3,33 & 201,4 & 2,04 & 197,7 & 1,52 & 190,1 & 1,18 \\ 
+211,0 & 3,48 & 221,3 & 2,20 & 212,1 & 1,57 & 210,9 & 1,25 \\ 
+229,9 & 3,68 & 240,7 & 2,34 & 230,4 & 1,67 & 230,0 & 1,33 \\ 
+251,6 & 3,84 & 261,0 & 2,47 & 249,4 & 1,76 & 252,0 & 1,41 \\ 
+272,4 & 4,05 & 274,7 & 2,51 & 270,9 & 1,85 & 270,0 & 1,48 \\ 
+290,2 & 4,18 & 288,3 & 2,60 & 291,0 & 1,93 & 292,8 & 1,54 \\ 
+311,3 & 4,29 & 311,1 & 2,70 & 311,8 & 2,01 & 307,7 & 1,59 \\ 
+329,8 & 4,45 & 330,3 & 2,79 & 329,8 & 2,07 & 329,1 & 1,65 \\ 
+354,0 & 4,62 & 354,1 & 2,91 & 354,1 & 2,15 & 354,2 & 1,71 \\ 
+\end{tabular}
+\caption{Naměřená závislost $U(I_m)$ pro různé $d$}
+\label{t:vysledky}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\import{datos/}{UI.tex}
+\caption{Naměřená závislost $U(I_m)$ pro různé $r$}
+\label{g:vysledky}
+\end{graph}

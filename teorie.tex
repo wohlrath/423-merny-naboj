@@ -1,1 +1,35 @@
 \section*{Teoretická část}
+Poměr náboje elektronu $e$ a jeho hmotnosti $m_e$ nazýváme měrný náboj elektronu $e/m_e$.
+
+Pokud elektron letí rychlostí $v$ v homogenním magnetickém poli, jehož směr je kolmý na pohyb elektronu, začne elektron vlivem Lorentzovy síly vykonávat kruhový pohyb o poloměru $r$
+\begin{equation} 
+m_e  \frac{v^2}{r} = evB \,.
+\end{equation}
+Pokud je elektron urychlen napětím $U$, má kinetickou energii
+\begin{equation}
+\frac{1}{2}m_e v^2 = eU \,.
+\end{equation}
+
+Dosazením dostáváme měrný náboj \cite{skripta}
+\begin{equation} \label{e:mernynaboj}
+\frac{e}{m_e} = \frac{2U}{r^2 B^2} \,.
+\end{equation}
+
+Pro různá fixovaná $r$ budeme měřit závislost $U(B)$ urychlovacího napětí potřebného k dosažení poloměru dráhy $r$ na velikosti pole $B$.
+
+Magnetické pole budeme realizovat dvojicí cívek v Helmholtzově uspořádání. Pokud do cívek pustíme proud $I_m$, bude magnetická indukce v rovině pohybu elektronů
+\begin{equation}
+B=\frac{8\mu_0}{5\sqrt{5}} \frac{N I_m}{\rho_0} \,.
+\end{equation}
+Po dosazení hodnot z \cite{skripta} dostáváme 
+$B=(I_m/\SI{5}{\ampere}) \cdot \SI{3.46}{\milli\tesla}$, což se shoduje s hodnotou v \cite{skripta}. Té věříme více, protože předpokládáme, že je změřená.
+Dále používáme hodnotu z \cite{skripta}
+\begin{equation}
+B=(I_m/\SI{5}{\ampere}) \cdot \SI{3.5}{\milli\tesla} = \alpha I_m \qquad \text{, kde }\, \alpha=\frac{\SI{3.5}{\milli\tesla}}{\SI{5}{\ampere}} \,.
+\end{equation}
+Rozdíl těchto hodnot nám poskytl odhad systematické chyby, standardní odchylku $\alpha$ odhadujeme na \SI{1}{\percent} (po započtení nehomogenity, viz \cite{skripta}). Předpokládáme však, že je závislost skutečně dobře lineární a tato konstanta se pro různé $I_m$ nemění a měříme pořád přibližně na stejném místě, jinými slovy tato chyba se projeví až v konečném výsledku $e/m_e$.
+
+Měřenou závislost $U(B)$ budeme ve skutečnosti měřit jako $U(I_m)$.
+\begin{equation} \label{e:zavislost}
+U=\frac{1}{2} \frac{e}{m_e} r^2 \alpha^2 I_m^2
+\end{equation}

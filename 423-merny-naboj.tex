@@ -17,7 +17,7 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{url}
-
+\usepackage{import}
 \usepackage{siunitx}
 \sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
 
@@ -27,6 +27,7 @@
 \newfloat{tabulka}{htbp}{tbl}
 \floatname{tabulka}{Tabulka}
 
+\newcommand{\chyba}[3]{(\num{#1}\pm\num{#2}^{\text{stat}}\pm\num{#3}^{\text{sys}})\cdot\SI{e11}{\coulomb\per\kg}}
 \renewcommand{\thefootnote}{\roman{footnote}}
 
 \pagestyle{fancy}
@@ -39,19 +40,20 @@
 \begin{document}
 
 \begin{titlepage}
-\includepdf[pages={1}]{./graficos/423-tit.pdf}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
 \end{titlepage}
 
 \section*{Pracovní úkoly}
 \begin{enumerate}
-\item ÚKOLY
+\item Pootáčením baňky nastavte elektronový paprsek kolmo k magnetickému poli. Přitom si všímejte, že pokud není elektronový paprsek přesně kolmý k magnetickému poli, tvoří jeho dráha v experimentálním prostoru šroubovici s konstantním stoupáním.
+\item Pro celkové urychlovací napětí $U_c$ elektronového svazku v rozmezí od 150 do \SI{350}{\volt} určete magnetizační proudy $I_m$ potřebné k tomu, aby byl průměr kruhové dráhy svazku 40, 60, 80 a \SI{100}{\mm}. Vhodnou volbou dílčích urychlujících napětí $U_1$ a $U_2$ docilujte co nejlepší fokusaci pozorovaného elektronového svazku. Pro každý průměr dráhy naměřte alespoň 10 hodnot.
+\item Sestrojte graf závislostí $U_c$ na druhé mocnině $I_m$ pro jednotlivé průměry dráhy svazku. Regresí určete měrný náboj elektronu pro každý průměr dráhy. Diskutujte vliv průměru dráhy svazku na chybu určení $e/m_e$ s přihlédnutím k nejistotě jejího určení.
+
+
 \end{enumerate}
 
 %Teoretická část
 \input{teorie.tex}
-
-%Podmínky a měřící přístroje
-\input{podminky.tex}
 
 %Výsledky měření
 \input{vysledky.tex}
